@@ -6,7 +6,7 @@ COPY . /bin-pub-crypt
 WORKDIR /bin-pub-crypt
 
 RUN go mod download \
- && go build -buildmode pie -o /bin-pub-crypt/bin-pub-crypt
+  && CGO_ENABLED=0 go build -buildmode pie -o /bin-pub-crypt/bin-pub-crypt
 
 # production
 FROM gcr.io/distroless/base:debug AS production
