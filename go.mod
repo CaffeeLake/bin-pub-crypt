@@ -2,7 +2,7 @@ module bin-pub-crypt
 
 go 1.23.0
 
-toolchain go1.24.5
+toolchain go1.24.6
 
 require github.com/go-compile/rome v1.0.1
 
